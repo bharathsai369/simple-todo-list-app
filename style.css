@@ -1,0 +1,157 @@
+body {
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(225deg, hsl(0, 0%, 20%), white, hsl(0, 0%, 20%));
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.container {
+  max-height: 60vh;
+  width: 50vw;
+  padding: 2rem;
+  border-radius: 2rem;
+  /* background-color: hsl(0, 0%, 90%); */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.inputDiv {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 2rem;
+  padding: 0.4rem;
+  padding-left: 1rem;
+}
+
+#input {
+  flex: 1;
+  border: none;
+  outline: none;
+  width: 30vw;
+  background: transparent;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  margin-right: 0.2rem;
+  font-weight: 1rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+}
+#btn {
+  flex: 1;
+  border: 1px solid black;
+  outline: none;
+  font-weight: 1rem;
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: hsl(0, 0%, 90%);
+  transition: 0.3s ease-in;
+}
+
+.taskListDiv {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  overflow-y: auto;
+}
+
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+} */
+
+/* ::-webkit-scrollbar{
+  width: 5px;
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  background: #fff;
+} */
+
+.task {
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  width: 30vw;
+  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal; 
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.del-btn {
+  margin-bottom: 0.5;
+  margin-right: 0.5rem;
+  flex: 1;
+  font-weight: 1rem;
+  font-size: 1rem;
+  outline: none;
+  padding-left: 0.2rem;
+  padding-right: 0.4rem;
+  background: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(108, 254, 35);
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-height: 90vh;
+    width: 80vw;
+    border-radius: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+  }
+
+  h1 {
+    font-size: 2.5rem; 
+  }
+
+  #input {
+    width: 80%;
+    margin-right: 0.1rem;
+  }
+
+  #input,
+  #btn {
+    font-size: 1.2rem; 
+  }
+
+  .label {
+    width: 50vw;
+    font-size: 1.2rem;
+  }
+}
